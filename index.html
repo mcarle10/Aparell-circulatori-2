@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El aparato circulatorio | Simulador educativo</title>
+  <meta name="description" content="Recurso interactivo para aprender cómo circula la sangre por el corazón, los pulmones y el cuerpo." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="hero">
+  <nav class="nav wrap">
+    <div class="brand">🫀 <span>Aparato circulatorio</span></div>
+    <div class="navlinks">
+      <a href="#explicacion">Explicación</a><a href="#circuito">Circuito</a><a href="#corazon">Corazón</a><a href="#actividades">Actividades</a>
+    </div>
+  </nav>
+  <div class="hero-content wrap">
+    <div>
+      <p class="eyebrow">Ciencias Naturales · 5.º/6.º Primaria</p>
+      <h1>¿Cómo viaja la sangre por nuestro cuerpo?</h1>
+      <p class="lead">Descubre el recorrido completo de una gota de sangre: del cuerpo al corazón, del corazón a los pulmones, de los pulmones al corazón y, finalmente, de nuevo al cuerpo.</p>
+      <a class="btn primary" href="#simulador">▶ Iniciar el recorrido</a>
+    </div>
+    <div class="hero-heart" aria-hidden="true">🫀</div>
+  </div>
+</header>
+
+<main>
+<section id="explicacion" class="section wrap">
+  <div class="section-title"><span>01</span><h2>La idea clave</h2></div>
+  <div class="cards three">
+    <article class="card"><div class="icon">❤️</div><h3>El corazón</h3><p>Es un músculo que actúa como una bomba. Tiene cuatro cavidades y mantiene la sangre en movimiento.</p></article>
+    <article class="card"><div class="icon">🫁</div><h3>Los pulmones</h3><p>En ellos la sangre recibe oxígeno y libera dióxido de carbono. Este intercambio ocurre en los capilares que rodean los alvéolos.</p></article>
+    <article class="card"><div class="icon">🩸</div><h3>La sangre</h3><p>Transporta oxígeno, nutrientes y otras sustancias. También recoge sustancias de desecho, como el dióxido de carbono.</p></article>
+  </div>
+</section>
+
+<section id="circuito" class="section section-alt">
+<div class="wrap">
+  <div class="section-title"><span>02</span><h2>Los dos circuitos de la sangre</h2></div>
+  <div class="circuit-grid">
+    <article class="circuit-card pulmonary"><div class="badge">CIRCULACIÓN PULMONAR</div><h3>Corazón → pulmones → corazón</h3><p>La sangre con poco oxígeno sale del ventrículo derecho hacia los pulmones. Allí libera CO₂ y recoge O₂. Después vuelve al corazón por las venas pulmonares.</p></article>
+    <article class="circuit-card systemic"><div class="badge">CIRCULACIÓN SISTÉMICA</div><h3>Corazón → cuerpo → corazón</h3><p>La sangre rica en oxígeno sale del ventrículo izquierdo por la aorta. Llega a todos los tejidos, entrega oxígeno y nutrientes y recoge CO₂ y desechos.</p></article>
+  </div>
+  <div class="diagram-box">
+    <h3>El circuito completo</h3>
+    <img src="assets/circuito-sangre.svg" alt="Diagrama del circuito completo de la sangre entre cuerpo, corazón y pulmones" />
+    <p class="legend"><span class="blue-dot"></span> Sangre con poco oxígeno · <span class="red-dot"></span> Sangre rica en oxígeno</p>
+  </div>
+</div>
+</section>
+
+<section id="simulador" class="section wrap">
+  <div class="section-title"><span>03</span><h2>Simulador: sigue una gota de sangre</h2></div>
+  <div class="simulator">
+    <div class="sim-head"><div><strong id="stageTitle">Preparados para empezar</strong><p id="stageText">Pulsa “Iniciar recorrido” y observa cómo la sangre completa el circuito.</p></div><button class="btn primary" id="startBtn">▶ Iniciar recorrido</button></div>
+    <div class="progress"><div id="progressBar"></div></div>
+    <div class="route">
+      <div class="node active" data-step="0"><span>1</span><b>Cuerpo</b><small>Venas cavas</small></div>
+      <div class="arrow">→</div>
+      <div class="node" data-step="1"><span>2</span><b>Aurícula derecha</b><small>Recibe sangre</small></div>
+      <div class="arrow">→</div>
+      <div class="node" data-step="2"><span>3</span><b>Ventrículo derecho</b><small>La impulsa</small></div>
+      <div class="arrow">→</div>
+      <div class="node" data-step="3"><span>4</span><b>Pulmones</b><small>O₂ entra · CO₂ sale</small></div>
+      <div class="arrow">→</div>
+      <div class="node" data-step="4"><span>5</span><b>Aurícula izquierda</b><small>Recibe sangre</small></div>
+      <div class="arrow">→</div>
+      <div class="node" data-step="5"><span>6</span><b>Ventrículo izquierdo</b><small>La impulsa</small></div>
+      <div class="arrow">→</div>
+      <div class="node" data-step="6"><span>7</span><b>Cuerpo</b><small>Entrega O₂</small></div>
+    </div>
+    <div class="tip" id="tip">💡 Recuerda: las arterias llevan la sangre <strong>desde</strong> el corazón y las venas la llevan <strong>hacia</strong> el corazón.</div>
+  </div>
+</section>
+
+<section id="corazon" class="section section-alt">
+<div class="wrap">
+  <div class="section-title"><span>04</span><h2>El corazón por dentro</h2></div>
+  <div class="heart-layout">
+    <div class="heart-image"><img src="assets/corazon.svg" alt="Esquema del corazón con sus cuatro cavidades y principales vasos" /></div>
+    <div class="heart-info">
+      <div class="info-row blue"><b>Aurícula derecha</b><span>Recibe sangre con poco oxígeno procedente del cuerpo.</span></div>
+      <div class="info-row blue"><b>Ventrículo derecho</b><span>Envía esa sangre hacia los pulmones mediante las arterias pulmonares.</span></div>
+      <div class="info-row red"><b>Aurícula izquierda</b><span>Recibe de los pulmones la sangre rica en oxígeno mediante las venas pulmonares.</span></div>
+      <div class="info-row red"><b>Ventrículo izquierdo</b><span>Impulsa la sangre rica en oxígeno hacia todo el cuerpo a través de la aorta.</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section wrap">
+  <div class="section-title"><span>05</span><h2>Arterias, venas y capilares</h2></div>
+  <div class="vessels">
+    <div class="vessel"><div class="vessel-icon artery">↗</div><h3>Arterias</h3><p>Llevan la sangre <strong>desde el corazón</strong> hacia los órganos y tejidos.</p></div>
+    <div class="vessel"><div class="vessel-icon vein">↙</div><h3>Venas</h3><p>Llevan la sangre <strong>hacia el corazón</strong> desde los tejidos.</p></div>
+    <div class="vessel"><div class="vessel-icon capillary">•</div><h3>Capilares</h3><p>Son vasos muy finos donde se producen intercambios entre la sangre y las células.</p></div>
+  </div>
+</section>
+
+<section id="actividades" class="section section-alt">
+<div class="wrap">
+  <div class="section-title"><span>06</span><h2>Actividades para aprender</h2></div>
+  <div class="activities-grid">
+    <article class="activity"><span class="activity-num">1</span><h3>Ordena el recorrido</h3><p>Coloca en orden: <em>pulmones · ventrículo izquierdo · cuerpo · aurícula derecha · ventrículo derecho · aurícula izquierda</em>.</p><button class="btn outline" data-answer="La respuesta es: cuerpo → aurícula derecha → ventrículo derecho → pulmones → aurícula izquierda → ventrículo izquierdo → cuerpo.">Ver solución</button></article>
+    <article class="activity"><span class="activity-num">2</span><h3>¿Rojo o azul?</h3><p>Indica qué color usarías para la sangre rica en oxígeno y cuál para la sangre con poco oxígeno.</p><button class="btn outline" data-answer="Rojo = sangre rica en oxígeno. Azul = sangre con poco oxígeno. Es una convención para facilitar los esquemas.">Ver solución</button></article>
+    <article class="activity"><span class="activity-num">3</span><h3>Detecta el error</h3><p>“La sangre con poco oxígeno va del cuerpo al ventrículo izquierdo”. ¿Es correcto?</p><button class="btn outline" data-answer="No. La sangre con poco oxígeno vuelve del cuerpo a la aurícula derecha y después pasa al ventrículo derecho.">Ver solución</button></article>
+    <article class="activity"><span class="activity-num">4</span><h3>Reto del corazón</h3><p>Explica con tus palabras por qué el corazón tiene cuatro cavidades.</p><button class="btn outline" data-answer="Porque sus dos lados realizan funciones diferentes: el lado derecho envía sangre a los pulmones y el izquierdo envía sangre rica en oxígeno al cuerpo.">Ver solución</button></article>
+    <article class="activity quiz"><span class="activity-num">5</span><h3>Miniquiz</h3><p>¿Qué vaso lleva sangre del ventrículo izquierdo al cuerpo?</p><div class="quiz-options"><button data-correct="false">Vena cava</button><button data-correct="true">Aorta</button><button data-correct="false">Arteria pulmonar</button></div><div id="quizResult"></div></article>
+    <article class="activity"><span class="activity-num">6</span><h3>Investiga</h3><p>Busca tu pulso durante 15 segundos, multiplica las pulsaciones por 4 y registra el resultado. Repite después de una actividad física suave.</p><p class="small">Actividad orientativa: no pretende diagnosticar ni evaluar la salud.</p></article>
+  </div>
+</div>
+</section>
+
+<section class="section wrap final-call">
+  <h2>¿Ya puedes contar el recorrido?</h2>
+  <p>Intenta explicarlo sin mirar: <strong>cuerpo → corazón derecho → pulmones → corazón izquierdo → cuerpo</strong>.</p>
+  <button class="btn primary" id="repeatBtn">↻ Repetir simulador</button>
+</section>
+</main>
+
+<footer><div class="wrap"><p><strong>Aparato circulatorio · Recurso educativo</strong></p><p>Material creado para uso escolar. Los esquemas son ilustraciones educativas propias. Para ampliar información médica, consulta fuentes sanitarias fiables.</p></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
